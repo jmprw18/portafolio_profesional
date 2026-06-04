@@ -1,4 +1,4 @@
-# Portafolio Profesional — Javi A. Torres
+# Portafolio Profesional —
 
 Portafolio web basado en el diseño **Portafolio Dinámico Pro** (Google Stitch, proyecto `5950687497862370115`).
 
