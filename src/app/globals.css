@@ -1,0 +1,287 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Design tokens (light) ─── */
+:root {
+  --ds-surface: #fef8f6;
+  --ds-surface-elevated: #f2edea;
+  --ds-surface-variant: #e7e1df;
+  --ds-primary: #000000;
+  --ds-secondary: #5e5e5d;
+  --ds-on-surface-variant: #4c463e;
+  --ds-outline: #7e766d;
+  --ds-outline-variant: #cfc5bb;
+  --ds-outline-hover: #747472;
+  --ds-surface-tint: #685c4f;
+  --ds-contact-bg: #000000;
+  --ds-contact-text: #fef8f6;
+  --ds-overlay: rgb(0 0 0 / 0.5);
+  --ds-grid-dot: #7e766d;
+  --ds-reveal-y: 20px;
+  --ds-ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark {
+  --ds-surface: #141312;
+  --ds-surface-elevated: #1d1b1a;
+  --ds-surface-variant: #363433;
+  --ds-primary: #e7e1df;
+  --ds-secondary: #c7c6c3;
+  --ds-on-surface-variant: #cfc5bb;
+  --ds-outline: #4c463e;
+  --ds-outline-variant: #4c463e;
+  --ds-outline-hover: #988f86;
+  --ds-surface-tint: #d4c4b3;
+  --ds-contact-bg: #0f0e0d;
+  --ds-contact-text: #e7e1df;
+  --ds-grid-dot: #4c463e;
+}
+
+@theme inline {
+  --color-surface: var(--ds-surface);
+  --color-surface-elevated: var(--ds-surface-elevated);
+  --color-surface-variant: var(--ds-surface-variant);
+  --color-primary: var(--ds-primary);
+  --color-secondary: var(--ds-secondary);
+  --color-on-surface-variant: var(--ds-on-surface-variant);
+  --color-outline: var(--ds-outline);
+  --color-outline-variant: var(--ds-outline-variant);
+  --color-outline-hover: var(--ds-outline-hover);
+  --color-surface-tint: var(--ds-surface-tint);
+  --color-contact-bg: var(--ds-contact-bg);
+  --color-contact-text: var(--ds-contact-text);
+
+  --spacing-gutter: 1rem;
+  --spacing-gutter-md: 1.5rem;
+  --spacing-margin-mobile: 1rem;
+  --spacing-margin-desktop: 2rem;
+  --spacing-section-gap: 5rem;
+  --spacing-container-max: 75rem;
+
+  --font-headline: var(--font-space-mono);
+  --font-body: var(--font-public-sans);
+  --font-mono: var(--font-jetbrains);
+  --font-label: var(--font-courier);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply min-h-screen overflow-x-hidden bg-surface text-primary antialiased;
+    font-family: var(--font-public-sans), system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-space-mono), monospace;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/* Drafting grid */
+.bg-grid {
+  background-size: 20px 20px;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    color-mix(in srgb, var(--ds-grid-dot) 35%, transparent) 1px,
+    transparent 0
+  );
+}
+
+/* Scroll reveal — CSS fallback when JS disabled */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-on-scroll:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(var(--ds-reveal-y));
+  }
+
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.6s var(--ds-ease-reveal),
+      transform 0.6s var(--ds-ease-reveal);
+  }
+
+  .card-reveal:not(.is-visible) {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  .card-reveal.is-visible {
+    opacity: 1;
+    transform: scale(1);
+    transition:
+      opacity 0.8s var(--ds-ease-reveal),
+      transform 0.8s var(--ds-ease-reveal);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .card-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.9;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .terminal-flicker {
+    animation: flicker 2s infinite alternate;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Typography utilities */
+.text-headline-xl {
+  font-family: var(--font-space-mono), monospace;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.text-headline-lg {
+  font-family: var(--font-space-mono), monospace;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.text-headline-md {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.text-body-lg {
+  font-family: var(--font-public-sans), sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.text-body-sm {
+  font-family: var(--font-jetbrains), monospace;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.text-label-caps {
+  font-family: var(--font-courier), monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Section rhythm — evita colisión de texto */
+.section-block {
+  @apply border-b border-outline py-16 md:py-20;
+  scroll-margin-top: 5.5rem;
+}
+
+.section-inner {
+  @apply mx-auto w-full max-w-[var(--spacing-container-max)] px-4 md:px-6;
+}
+
+.prose-safe {
+  @apply max-w-2xl break-words;
+}
+
+/* Iconos Macintosh (1-bit SVG) */
+.mac-icon {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.dark .mac-icon-default {
+  filter: invert(1);
+}
+
+/* Tarjeta de contacto (fondo siempre oscuro) */
+.mac-icon-on-dark {
+  filter: invert(1);
+}
+
+/* Efecto tecla física (toggle tema, skills) */
+.retro-key {
+  box-shadow: 4px 4px 0 0 currentColor;
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.retro-key:hover {
+  background-color: var(--ds-primary);
+  color: var(--ds-surface);
+}
+
+.retro-key-fab:hover {
+  background-color: var(--ds-surface);
+  color: var(--ds-primary);
+}
+
+.retro-key:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 0 currentColor;
+}
+
+/* Espacio para FAB de tema + footer amplio */
+.page-bottom-safe {
+  padding-bottom: calc(5rem + 4.5rem);
+}
+
+.footer-bar {
+  min-height: 8.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: calc(2.5rem + 4.5rem);
+}
