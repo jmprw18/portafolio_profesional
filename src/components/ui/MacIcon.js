@@ -1,4 +1,5 @@
 import { resolveMacIcon } from "@/lib/mac-icons";
+import { withBasePath } from "@/lib/with-base-path";
 
 /**
  * Icono pixel Mac clásico (SVG local en /public/icons/mac)
@@ -16,7 +17,7 @@ export function MacIcon({
 
   return (
     <img
-      src={`/icons/mac/${file}.svg`}
+      src={withBasePath(`/icons/mac/${file}.svg`)}
       alt=""
       width={size}
       height={size}
