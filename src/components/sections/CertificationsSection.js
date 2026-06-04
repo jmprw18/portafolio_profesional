@@ -48,6 +48,10 @@ export function CertificationsSection() {
               <p className="text-body-sm text-outline-hover">
                 {education.period}
               </p>
+              <br />
+              <p className="prose-safe text-body-lg text-on-surface-variant text-justify">
+                {education.tesis}
+              </p>
             </article>
           </div>
         </div>

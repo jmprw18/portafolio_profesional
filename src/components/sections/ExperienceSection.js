@@ -20,9 +20,15 @@ export function ExperienceSection() {
               key={`${job.company}-${job.period}`}
               className="group grid grid-cols-1 gap-4 border-b border-outline-variant pb-8 md:grid-cols-4 md:gap-6"
             >
-              <time className="text-body-sm text-secondary md:col-span-1 md:pt-1">
-                {job.period}
-              </time>
+              <div className="md:col-span-1 md:pt-1">
+                <time className="text-body-sm text-secondary md:text-right">
+                  {job.period}
+                </time>
+                <p className="text-body-sm font-medium text-secondary">
+                  {job.location}
+                </p>
+              </div>
+
               <div className="min-w-0 md:col-span-3">
                 <h3 className="text-headline-md mb-2 text-primary transition-colors group-hover:text-surface-tint">
                   {job.title}
@@ -30,9 +36,24 @@ export function ExperienceSection() {
                 <p className="text-body-lg mb-4 font-bold text-secondary">
                   {job.company}
                 </p>
-                <p className="prose-safe text-body-lg text-on-surface-variant">
-                  {job.description}
-                </p>
+                <ul className="list-disc list-inside mb-4">
+                  {job.description?.split(". ").map((point, index) => (
+                    <li
+                      key={index}
+                      className="text-body-lg text-on-surface-variant text-justify"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                  {job.description2?.split(". ").map((point, index) => (
+                    <li
+                      key={index}
+                      className="text-body-lg text-on-surface-variant text-justify"
+                    >
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </article>
           ))}

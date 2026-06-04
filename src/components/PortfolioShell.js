@@ -15,6 +15,7 @@ import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import { SkillsSection } from "@/components/sections/SkillsSection";
 import { CertificationsSection } from "@/components/sections/CertificationsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { LanguagesSection } from "@/components/sections/LanguagesSection";
 
 export function PortfolioShell() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -37,6 +38,7 @@ export function PortfolioShell() {
         <ExperienceSection />
         <ProjectsSection />
         <SkillsSection />
+        <LanguagesSection />
         <CertificationsSection />
         <ContactSection />
       </main>

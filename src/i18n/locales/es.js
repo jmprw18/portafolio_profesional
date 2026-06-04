@@ -27,6 +27,7 @@ export const es = {
     experience: "Experiencia",
     projects: "Proyectos",
     skills: "Habilidades",
+    languages: "Idiomas",
     certifications: "Certificaciones",
     education: "Educación",
     contact: "Contacto",
@@ -35,24 +36,29 @@ export const es = {
     { id: "experience", icon: "work" },
     { id: "projects", icon: "code" },
     { id: "skills", icon: "bolt" },
+    { id: "languages", icon: "globe" },
     { id: "certifications", icon: "verified" },
     { id: "education", icon: "school" },
     { id: "contact", icon: "mail" },
   ],
   experience: [
     {
-      period: "2022 — ACTUAL",
+      period: "Mayo 2025 — ACTUAL",
+      location: "Ciudad de México",
       title: "Ingeniero de Software Senior",
       company: "TECH CORP INC.",
       description:
         "Arquitectura e implementación de infraestructura de microservicios escalable. Lideré un equipo de 4 desarrolladores en la migración de un monolito legacy a arquitectura containerizada, mejorando el tiempo de respuesta en un 40%.",
     },
     {
-      period: "2019 — 2022",
-      title: "Ingeniero de Software II",
-      company: "DATA SYSTEMS LLC",
+      period: "Mayo 2025 — Febrero 2025",
+      location: "Toluca, Estado de México",
+      title: "Programador WEB",
+      company: "ESTUFAS DOMÉSTICAS S.A.P.I.",
       description:
-        "Desarrollo de funcionalidades clave para un panel de analítica interno con React y Node.js. Optimización de consultas SQL que redujo tiempos de carga en un 25%.",
+        "Desarrollo e implementación de una aplicación ecommerce para la venta de estufas domésticas (www.fragaestufas.com.mx), utilizando herramientas como PHP, MYSQL, JavaScript, HTML y CSS. Integración de pasarelas de pago Mercado Pago (Checkout Bricks) mediante consumo de APIs REST, garantizando transacciones seguras y confiables. Implementación de API de lógistica  EnviaYa, permitiendo la cotización automática de envíos con diferentes paqqueterías, optimizando la experiencia de compra y facilitando la gestión de envíos. Configuración de SEO On-Page, análisis de tráfico y optimización del posicionamiento en motores de búsqueda mediante Google Analytics y Google Tag Manager. Implementación de capas de seguridad y optimización del rendimiento, asegurando una experiencia de usuario fluida y segura.",
+      description2:
+        "Planeación en el desarrollo de un sistema interno tipo CRM, orientado a la optimización de procesos administrativos. Desarrollo de módulos para la gestión de tickets, solicitudes de requisición de personal, solicitudes de vacaciones y registro de entradas y salidas del personal a la empresa. Integración de API de whatsapp Business como canal de notificación automática para mejorar la comunicación interna y la eficiencia operativa."
     },
   ],
   projects: [
@@ -73,14 +79,20 @@ export const es = {
   ],
   skills: [
     "JavaScript / TypeScript",
+    "PHP",
+    "JAVA",
     "Python",
     "React y Vue.js",
-    "Node.js",
     "Next.js",
-    "PostgreSQL",
-    "Docker / Kubernetes",
-    "AWS",
-    "Arquitectura de sistemas",
+    "MySQL",
+    "Firestore NoSQL",
+    "C / C++",
+    "HTML / CSS",
+    "Tailwind CSS",
+    "Google Cloud",
+    "Excel",
+    "API REST",
+    "SaSS"
   ],
   certifications: [
     { name: "AWS Certified Solutions Architect", year: "2023" },
@@ -88,10 +100,15 @@ export const es = {
     { name: "Google Cloud Professional Developer", year: "2021" },
   ],
   education: {
-    degree: "Lic. en Ciencias de la Computación",
-    school: "UNIVERSIDAD DE TECNOLOGÍA",
-    period: "2015 — 2019",
+    degree: "Escuela Superior de Cómputo - ESCOM",
+    school: "Instituto Politécnico Nacional",
+    period: "2020 - 2025",
+    tesis: "Desarrollo de un sistema de análisis financiero con datos en tiempo real, para medir el desempeño de empresas que cotizan en NASDAQ",
   },
+  languages: [
+    { id: "es", name: "Español", level: "Nativo" },
+    { id: "en", name: "Inglés", level: "B2" },
+  ],
   socialLinks: [
     { label: "GitHub", href: "#", icon: "github" },
     { label: "LinkedIn", href: "#", icon: "link" },

@@ -20,6 +20,7 @@ export const macIconMap = {
   dark_mode: "moon",
   light_mode: "sun",
   apple: "apple",
+  globe: "hypercard",
 };
 
 export function resolveMacIcon(name) {

@@ -18,3 +18,4 @@ export const certifications = es.certifications;
 export const education = es.education;
 export const socialLinks = es.socialLinks;
 export const footerLinks = es.footerLinks;
+export const languages = es.languages;

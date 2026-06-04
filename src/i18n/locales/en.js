@@ -27,6 +27,7 @@ export const en = {
     experience: "Experience",
     projects: "Projects",
     skills: "Skills",
+    languages: "Languages",
     certifications: "Certifications",
     education: "Education",
     contact: "Contact",
@@ -35,6 +36,7 @@ export const en = {
     { id: "experience", icon: "work" },
     { id: "projects", icon: "code" },
     { id: "skills", icon: "bolt" },
+    { id: "languages", icon: "globe" },
     { id: "certifications", icon: "verified" },
     { id: "education", icon: "school" },
     { id: "contact", icon: "mail" },
@@ -92,6 +94,10 @@ export const en = {
     school: "UNIVERSITY OF TECHNOLOGY",
     period: "2015 — 2019",
   },
+  languages: [
+    { id: "es", name: "Spanish", level: "Native" },
+    { id: "en", name: "English", level: "Upper intermediate" },
+  ],
   socialLinks: [
     { label: "GitHub", href: "#", icon: "github" },
     { label: "LinkedIn", href: "#", icon: "link" },
