@@ -36,6 +36,12 @@ En componentes: `const { locale, setLocale, content } = useLanguage()`.
 
 Edita el contenido en los archivos de locale (`src/i18n/locales/`), no en `portfolio.js` (solo compatibilidad).
 
+## Discord, robots.txt y Cloudflare
+
+- Botón **Discord** en la tarjeta de contacto y footer.
+- Sustituye `https://discord.gg/TU_INVITE` en `siteMeta.discordUrl` y enlaces Discord de `es.js` / `en.js`.
+- Guía: [`docs/CONFIGURACION-CLOUDFLARE.md`](docs/CONFIGURACION-CLOUDFLARE.md) (privacidad en Discord, `robots.txt`, `_headers`, Cloudflare).
+
 ## Scripts
 
 | Comando | Descripción |

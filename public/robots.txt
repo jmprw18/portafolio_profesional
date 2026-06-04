@@ -1,0 +1,5 @@
+# Portafolio — https://jmprw18.github.io/portafolio_profesional/
+User-agent: *
+Allow: /
+
+Disallow: /_next/

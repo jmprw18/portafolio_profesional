@@ -1,5 +1,6 @@
 "use client";
 
+import { Link as LinkIcon } from "lucide-react";
 import { useLanguage } from "@/components/providers/LanguageProvider";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { SectionHeader } from "@/components/ui/SectionHeader";
@@ -22,16 +23,32 @@ export function CertificationsSection() {
               {certifications.map((cert, index) => (
                 <li
                   key={cert.name}
-                  className={`flex flex-col gap-2 px-4 py-4 transition-colors hover:bg-surface-variant sm:flex-row sm:items-center sm:justify-between ${
+                  className={`grid grid-cols-[3fr_1fr] items-center gap-3 px-4 py-4 transition-colors hover:bg-surface-variant ${
                     index < certifications.length - 1
                       ? "border-b border-outline"
                       : ""
                   }`}
                 >
-                  <span className="text-body-lg text-primary">{cert.name}</span>
-                  <span className="text-body-sm shrink-0 text-secondary">
-                    {cert.year}
-                  </span>
+                  <div className="min-w-0">
+                    <span className="text-headline-sm text-primary font-bold">{cert.name}</span>
+                    <span className="text-body-sm text-secondary">
+                      {" "}
+                      — {cert.institution} · {cert.year}
+                    </span>
+                  </div>
+                  <div className="flex justify-end">
+                    {cert.href && cert.href !== "#" ? (
+                      <a
+                        href={cert.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-secondary transition-colors hover:text-primary"
+                        aria-label={`Ver certificado: ${cert.name}`}
+                      >
+                        <LinkIcon size={22} aria-hidden />
+                      </a>
+                    ) : null}
+                  </div>
                 </li>
               ))}
             </ul>
@@ -49,6 +66,7 @@ export function CertificationsSection() {
                 {education.period}
               </p>
               <br />
+              <span className="text-body-sm text-secondary font-bold">Tesis:</span>
               <p className="prose-safe text-body-lg text-on-surface-variant text-justify">
                 {education.tesis}
               </p>

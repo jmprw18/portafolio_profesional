@@ -15,7 +15,13 @@ export function Footer() {
           {content.footerLinks.map((link) => (
             <a
               key={link.label}
-              href={link.href}
+              href={
+                link.label === "DISCORD"
+                  ? content.siteMeta.discordUrl
+                  : link.href
+              }
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-body-sm text-secondary transition-colors duration-300 hover:text-primary"
             >
               {link.label}

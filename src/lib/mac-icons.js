@@ -17,6 +17,7 @@ export const macIconMap = {
   arrow_outward: "next-arrow",
   link: "hand-right",
   github: "floppy",
+  discord: "sound",
   dark_mode: "moon",
   light_mode: "sun",
   apple: "apple",

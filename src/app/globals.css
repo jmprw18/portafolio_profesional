@@ -245,6 +245,59 @@
   filter: invert(1);
 }
 
+/* Tarjeta de contacto — inclinación al puntero */
+.contact-tilt-wrap {
+  perspective: 900px;
+}
+
+.contact-tilt-shell {
+  transform: rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg));
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.18s ease-out;
+}
+
+.contact-tilt-shell.contact-tilt-active {
+  transition: none;
+}
+
+.contact-tilt-shell.contact-tilt-entering {
+  transition: transform 0.18s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-tilt-shell {
+    transform: none !important;
+    transition: none;
+  }
+}
+
+/* Tarjeta contacto — layout Stitch */
+.contact-card-id {
+  font-family: var(--font-jetbrains), monospace;
+}
+
+.contact-photo-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.contact-photo-shadow {
+  position: absolute;
+  inset: 0;
+  transform: translate(6px, 6px);
+  border: 1px solid var(--ds-contact-text);
+  pointer-events: none;
+}
+
+.contact-photo-frame {
+  position: relative;
+  border: 1px solid var(--ds-contact-text);
+  background-color: var(--ds-contact-text);
+  line-height: 0;
+}
+
 /* Tarjeta de contacto (fondo siempre oscuro) */
 .mac-icon-on-dark {
   filter: invert(1);

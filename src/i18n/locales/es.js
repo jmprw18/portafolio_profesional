@@ -5,11 +5,14 @@ export const es = {
       "Portafolio profesional de José Miguel Morales Piña — Ingeniero de Software. Experiencia, proyectos y contacto.",
     brand: "PORTAFOLIO.DEV",
     name: "José Miguel Morales Piña",
-    role: "Ingeniero de Software",
+    role: "Desarrollador Full Stack",
     typewriterText: "José Miguel Morales Piña",
     footer: "© 2026 JOSÉ MIGUEL MORALES PIÑA. TODOS LOS DERECHOS RESERVADOS.",
     contactId: "ID: 1048576",
     status: "ACEPTANDO CONSULTAS",
+    avatar: "/images/86423656_imagen_profile.jpeg",
+    avatarAlt: "José Miguel Morales Piña",
+    discordUrl: "https://discord.gg/miguelmorales7521",
   },
   ui: {
     heroSysInit: "// SYS_INIT",
@@ -43,12 +46,12 @@ export const es = {
   ],
   experience: [
     {
-      period: "Mayo 2025 — ACTUAL",
+      period: "Febrero 2026 — ACTUAL",
       location: "Ciudad de México",
-      title: "Ingeniero de Software Senior",
-      company: "TECH CORP INC.",
+      title: "Desarrollador Full Stack",
+      company: "Dark Box",
       description:
-        "Arquitectura e implementación de infraestructura de microservicios escalable. Lideré un equipo de 4 desarrolladores en la migración de un monolito legacy a arquitectura containerizada, mejorando el tiempo de respuesta en un 40%.",
+        "Desarrollo e implementación de aplicación web para la administración de proyectos audiovisuales (belowdline.com), usando Next.js 15, React 19, TypeScript, Tailwind CSS y shadcn/ui. Añadí funciones con GPT-4o para reuniones y planificación de actividades mensuales. Implementación del servidor en Firebase: Firebase Hosting, diseño y creación de bases de datos NoSQL (Firestore), reglas de seguridad en Firebase Storage, Firebase Authentication (Google) y lógica serverless con Cloud Functions. En el flujo de desarrollo trabajo con Cursor, agentes configurados (Rules/Skills) y MCPs para diferentes softwares. Diseño de interfaces con Figma y Google Stich."
     },
     {
       period: "Mayo 2025 — Febrero 2025",
@@ -63,18 +66,18 @@ export const es = {
   ],
   projects: [
     {
-      title: "Nexus Core Engine",
+      title: "Sistema ERP simulando un flujo de Proveedores y Facturación",
       description:
-        "Motor de procesamiento de tareas distribuido en Rust. Gestiona miles de trabajos concurrentes con overhead mínimo.",
-      tags: ["Rust", "Redis"],
-      href: "#",
+        "Este proyecto es una prueba técnica de un módulo funcional de un ERP, enfocado en la simulación de un proceso empresarial real. El flujo comienza con la gestión de proveedores, seguido de la creación de estimaciones, requisiciones, órdenes de compra, facturación y tesorería.",
+      tags: ["JavaScript", "HTML5", "NoSQL", "Tailwind CSS"],
+      href: "https://jmprw18.github.io/ERP_proveedores_facturacion/",
     },
     {
-      title: "Archive Protocol",
+      title: "Ecommerce de FRAGA",
       description:
-        "Interfaz de almacenamiento descentralizado que mapea IPFS a endpoints REST estándar para integración sencilla.",
-      tags: ["Go", "IPFS"],
-      href: "#",
+        "Portal web para la compra de productos, carrito de compras con integración de pasarelas de pago Mercado Pago (Checkout Bricks) y API de lógistica EnviaYa.",
+      tags: ["PHP", "MYSQL", "JavaScript", "HTML5", "CSS3", "Mercado Pago", "API REST"],
+      href: "https://www.fragaestufas.com.mx/",
     },
   ],
   skills: [
@@ -84,20 +87,22 @@ export const es = {
     "Python",
     "React y Vue.js",
     "Next.js",
+    "Node.js",
     "MySQL",
     "Firestore NoSQL",
     "C / C++",
+    "Figma",
     "HTML / CSS",
     "Tailwind CSS",
     "Google Cloud",
-    "Excel",
+    "Google Firebase",
     "API REST",
-    "SaSS"
+    "Excel",
   ],
   certifications: [
-    { name: "AWS Certified Solutions Architect", year: "2023" },
-    { name: "CKA: Certified Kubernetes Administrator", year: "2022" },
-    { name: "Google Cloud Professional Developer", year: "2021" },
+    { name: "Desarrollo Web Completo", institution: "Udemy", year: "oct 2024", href: "https://www.udemy.com/certificate/UC-b0745df7-9851-4a29-bd0d-a3bca5bc8252/"},
+    { name: "Programnación en C de Cero a Experto con estructura de datos", institution: "Udemy", year: "oct 2024", href: "https://www.udemy.com/certificate/UC-6d48ab83-af43-4609-a138-00226bca7a6f/"},
+    { name: "Introducción al Desarrollo WEB", institution: "Instituto Politécnico Nacional", year: "may 2023", href: "#"},
   ],
   education: {
     degree: "Escuela Superior de Cómputo - ESCOM",
@@ -110,13 +115,15 @@ export const es = {
     { id: "en", name: "Inglés", level: "B2" },
   ],
   socialLinks: [
-    { label: "GitHub", href: "#", icon: "github" },
-    { label: "LinkedIn", href: "#", icon: "link" },
-    { label: "OCC", href: "#", icon: "work" },
+    { label: "GitHub", href: "https://github.com/jmprw18", icon: "github" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/josé-miguel-morales-piña-68b74123a?utm_source=share_via&utm_content=profile&utm_medium=member_ios", icon: "link" },
+    { label: "Google Skills", href: "https://www.skills.google/public_profiles/11f84ffd-01b2-4190-9144-36f415795dd6", icon: "work" },
+    { label: "Discord", href: "https://discord.gg/miguelmorales7521", icon: "discord" },
   ],
   footerLinks: [
-    { label: "GITHUB", href: "#" },
-    { label: "LINKEDIN", href: "#" },
-    { label: "TWITTER", href: "#" },
+    { label: "GITHUB", href: "https://github.com/jmprw18" },
+    { label: "LINKEDIN", href: "https://www.linkedin.com/in/josé-miguel-morales-piña-68b74123a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" },
+    { label: "Google Skills", href: "https://www.skills.google/public_profiles/11f84ffd-01b2-4190-9144-36f415795dd6" },
+    { label: "DISCORD", href: "https://discord.gg/miguelmorales7521" },
   ],
 };

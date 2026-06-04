@@ -13,8 +13,8 @@ export function SkillsSection() {
       <div className="section-inner">
         <SectionHeader icon="bolt" title={content.sections.skills} />
         <ul className="flex flex-wrap gap-4">
-          {content.skills.map((skill) => (
-            <li key={skill}>
+          {content.skills.map((skill, index) => (
+            <li key={`${skill}-${index}`}>
               <RetroKey>{skill}</RetroKey>
             </li>
           ))}
