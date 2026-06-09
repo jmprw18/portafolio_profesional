@@ -52,13 +52,30 @@ export function Typewriter({ text, className = "" }) {
     return () => clearTimeout(timeoutId);
   }, [text, prefersReducedMotion]);
 
+  if (prefersReducedMotion) {
+    return (
+      <h1
+        className={`text-headline-xl text-primary mb-4 max-w-full ${className}`}
+      >
+        {text}
+      </h1>
+    );
+  }
+
   return (
     <h1
-      className={`text-headline-xl text-primary mb-4 min-h-[3rem] md:min-h-[3.5rem] ${className}`}
+      className={`text-headline-xl text-primary mb-4 grid max-w-full ${className}`}
+      aria-label={text}
     >
-      <span ref={displayRef}>{prefersReducedMotion ? text : ""}</span>
-      <span className="cursor-blink" aria-hidden="true">
-        |
+      {/* Reserva el alto/ancho final (incl. salto de línea en móvil) */}
+      <span className="invisible col-start-1 row-start-1" aria-hidden="true">
+        {text}|
+      </span>
+      <span className="col-start-1 row-start-1">
+        <span ref={displayRef} />
+        <span className="cursor-blink" aria-hidden="true">
+          |
+        </span>
       </span>
     </h1>
   );

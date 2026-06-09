@@ -12,7 +12,7 @@ export const en = {
     status: "ACCEPTING INQUIRIES",
     avatar: "/images/86423656_imagen_profile.jpeg",
     avatarAlt: "José Miguel Morales Piña",
-    discordUrl: "https://discord.gg/miguelmorales7531",
+    discordUrl: "https://discord.gg/miguelmorales7521",
   },
   ui: {
     heroSysInit: "// SYS_INIT",
@@ -120,12 +120,12 @@ export const en = {
     { label: "GitHub", href: "https://github.com/jmprw18", icon: "github" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/josé-miguel-morales-piña-68b74123a?utm_source=share_via&utm_content=profile&utm_medium=member_ios", icon: "link" },
     { label: "OCC", href: "https://occ.mx/profile/11f84ffd-01b2-4190-9144-36f415795dd6", icon: "work" },
-    { label: "Discord", href: "https://discord.gg/miguelmorales7531", icon: "discord" },
+    { label: "Discord", href: "https://discord.gg/miguelmorales7521", icon: "discord" },
   ],
   footerLinks: [
     { label: "GITHUB", href: "https://github.com/jmprw18" },
     { label: "LINKEDIN", href: "https://www.linkedin.com/in/josé-miguel-morales-piña-68b74123a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" },
     { label: "Google Skills", href: "https://www.skills.google/public_profiles/11f84ffd-01b2-4190-9144-36f415795dd6" },
-    { label: "DISCORD", href: "https://discord.gg/miguelmorales7531" },
+    { label: "DISCORD", href: "https://discord.gg/miguelmorales7521" },
   ],
 };
